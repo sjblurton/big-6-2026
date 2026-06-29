@@ -11,10 +11,10 @@ jobs:
     name: Validate
     runs-on: ubuntu-latest
     env:
-      NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: "vars.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY"
-      NEXT_PUBLIC_SUPABASE_URL: "vars.NEXT_PUBLIC_SUPABASE_URL"
-      SUPABASE_SECRET_KEY: "secrets.SUPABASE_SECRET_KEY"
-      SUPABASE_URL: "$vars.SUPABASE_URL"
+      NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: "example key"
+      NEXT_PUBLIC_SUPABASE_URL: "example url"
+      SUPABASE_SECRET_KEY: "example secret"
+      SUPABASE_URL: "example url"
 
     steps:
       - name: Checkout repository
@@ -29,6 +29,9 @@ jobs:
         run: |
           corepack enable
           corepack prepare pnpm@11 --activate
+
+      - name: Check pnpm
+        run: pnpm --version
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
