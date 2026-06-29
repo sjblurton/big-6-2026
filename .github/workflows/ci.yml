@@ -24,6 +24,7 @@ jobs:
         uses: actions/setup-node@v5
         with:
           node-version-file: .nvmrc
+          package-manager-cache: false
 
       - name: Enable Corepack and pnpm
         run: |
@@ -32,14 +33,6 @@ jobs:
 
       - name: Check pnpm
         run: pnpm --version
-
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-
-      - name: Enable Corepack and pnpm
-        run: |
-          corepack enable
-          corepack prepare pnpm@11 --activate
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
