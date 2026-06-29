@@ -25,11 +25,13 @@ jobs:
         with:
           node-version-file: .nvmrc
 
-      - run: |
+      - name: Enable Corepack and pnpm
+        run: |
           corepack enable
           corepack prepare pnpm@11 --activate
 
-      - run: pnpm install --frozen-lockfile
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
 
       - name: Enable Corepack and pnpm
         run: |
