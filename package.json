@@ -2,6 +2,7 @@
   "name": "big-6-2026",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@11.5.2",
   "engines": {
     "node": ">=22"
   },
