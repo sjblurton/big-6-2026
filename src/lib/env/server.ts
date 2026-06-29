@@ -8,7 +8,7 @@ export const env = createEnv({
    */
   server: {
     SUPABASE_SECRET_KEY: z.string().min(1),
-    SUPABASE_DATABASE_URL: z.string().min(1),
+    SUPABASE_URL: z.string().min(1),
   },
   /*
    * Due to how Next.js bundles environment variables on Edge and Client,
@@ -18,6 +18,6 @@ export const env = createEnv({
    */
   runtimeEnv: {
     SUPABASE_SECRET_KEY: process.env.SUPABASE_SECRET_KEY,
-    SUPABASE_DATABASE_URL: process.env.SUPABASE_DATABASE_URL,
+    SUPABASE_URL: process.env.SUPABASE_URL,
   },
 });
