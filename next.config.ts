@@ -4,9 +4,7 @@ import "./src/lib/env/server";
 
 const nextConfig: NextConfig = {
   reactCompiler: true,
-  turbopack: {
-    root: __dirname,
-  },
+  outputFileTracingRoot: __dirname,
 };
 
 export default nextConfig;
