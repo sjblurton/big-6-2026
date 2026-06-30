@@ -3,3 +3,5 @@ pnpm-lock.yaml
 out/**
 build/**
 drizzle/**
+storybook-static/**
+*storybook.log
