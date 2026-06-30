@@ -43,17 +43,30 @@ Next.js + Supabase application with local-first development using pnpm and the S
 
    Starts the Next.js dev server at `http://localhost:3000`.
 
-## Environment variables (`.env.local`)
+## Database commands
+
+Use these when you change the Drizzle schema:
+
+```bash
+pnpm db:generate
+pnpm db:migrate
+```
+
+- `pnpm db:generate` creates migration SQL from the current schema changes.
+- `pnpm db:migrate` applies the generated migrations to your local Supabase database.
+- Run `supabase start` first so the local database is available.
+
+## Environment variables (`.env`)
 
 Create a local env file from the example and fill in values:
 
 ```bash
-cp .env.example .env.local
+cp .env.example .env
 ```
 
 - Use `.env.example` as the source of truth for required keys.
 - Set `NEXT_PUBLIC_SUPABASE_URL` to your Supabase project URL (same base URL as `SUPABASE_URL`) so browser-side Supabase clients can initialize.
-- Never commit real secrets in `.env.local`.
+- Never commit real secrets in `.env`.
 
 ## Testing
 
