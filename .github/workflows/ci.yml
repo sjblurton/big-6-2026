@@ -46,5 +46,8 @@ jobs:
       - name: Test (vitest)
         run: pnpm test
 
+      - name: Format (prettier)
+        run: pnpm format:check
+
       - name: Build (next build)
         run: pnpm build
