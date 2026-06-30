@@ -56,6 +56,19 @@ pnpm db:migrate
 - `pnpm db:migrate` applies the generated migrations to your local Supabase database.
 - Run `supabase start` first so the local database is available.
 
+## Storybook
+
+Use Storybook for component development, documentation, and interaction testing.
+
+```bash
+pnpm storybook
+pnpm build-storybook
+```
+
+- `pnpm storybook` starts Storybook locally on `http://localhost:6006`.
+- `pnpm build-storybook` creates a production build of the Storybook site.
+- Prefer Storybook for reusable UI component docs and interaction coverage.
+
 ## Environment variables (`.env`)
 
 Create a local env file from the example and fill in values:
