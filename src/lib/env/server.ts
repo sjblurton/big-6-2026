@@ -1,4 +1,4 @@
-import { createEnv } from "@t3-oss/env-nextjs"; // or core package
+import { createEnv } from "@t3-oss/env-nextjs";
 import * as z from "zod";
 
 export const env = createEnv({
